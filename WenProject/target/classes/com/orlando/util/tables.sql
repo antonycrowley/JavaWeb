@@ -1,0 +1,31 @@
+CREATE TABLE `CITY` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Id_State` int(11) NOT NULL,
+  `Name` varchar(50) NOT NULL,
+  `LastModified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`),
+  KEY `Id_State` (`Id_State`),
+  CONSTRAINT `CITY_ibfk_1` FOREIGN KEY (`Id_State`) REFERENCES `STATE` (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2458 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `PERSON` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(50) NOT NULL,
+  `Last_Name` varchar(50) NOT NULL,
+  `Email` varchar(50) DEFAULT NULL,
+  `Age` int(11) NOT NULL,
+  `Address` varchar(100) DEFAULT NULL,
+  `State` varchar(50) DEFAULT NULL,
+  `City` varchar(100) DEFAULT NULL,
+  `Password` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `STATE` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(50) NOT NULL,
+  `Abbrev` varchar(10) NOT NULL,
+  `LastModified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;

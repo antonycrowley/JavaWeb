@@ -1,2 +1,0 @@
-# JavaWeb
-Curso Java Web

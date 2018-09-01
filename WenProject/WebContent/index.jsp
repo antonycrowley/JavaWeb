@@ -12,7 +12,7 @@
 	<article>
 		<div class="container">
 			<div class="jumbotron">
-				
+				<form action="/WebProject/LoginServlet">
 				<div class="form-group">
 					<label for="usr">Username:</label>
 					<input type="text" name="email" class="form-control" id="usr">
@@ -25,7 +25,7 @@
 				
 				<button class="btn btn-lg btn-outline-primary btn-block">Sign in</button>
 				<a class="btn btn-lg btn-outline-danger btn-block" href="pages/register.jsp">Register</a>
-				
+				</form>>
 			</div>
 		</div>
 	</article>
